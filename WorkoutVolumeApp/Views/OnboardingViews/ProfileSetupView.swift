@@ -7,7 +7,7 @@ struct ProfileSetupView: View {
     @State private var showingNextScreen = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(spacing: 20) {
                 Text("Welcome to Workout Volume App")
                     .font(.largeTitle)
@@ -50,12 +50,9 @@ struct ProfileSetupView: View {
                 .disabled(!isFormValid)
                 .padding(.horizontal)
                 .padding(.bottom)
-                
-                NavigationLink(
-                    destination: TrainingPreferencesView(viewModel: viewModel),
-                    isActive: $showingNextScreen,
-                    label: { EmptyView() }
-                )
+            }
+            .navigationDestination(isPresented: $showingNextScreen) {
+                TrainingPreferencesView(viewModel: viewModel)
             }
             .onAppear {
                 name = viewModel.userPreferences.name
@@ -63,7 +60,6 @@ struct ProfileSetupView: View {
             }
             .navigationBarHidden(true)
         }
-        .navigationViewStyle(StackNavigationViewStyle())
         .preferredColorScheme(.dark)
     }
     

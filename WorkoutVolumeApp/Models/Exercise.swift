@@ -1,16 +1,21 @@
 import Foundation
 
+struct SecondaryMuscle: Codable, Hashable {
+    let muscle: MuscleGroup
+    let volumeFactor: Double
+}
+
 struct Exercise: Identifiable, Codable, Hashable {
     let id: UUID
     let name: String
     let primaryMuscle: MuscleGroup
-    let secondaryMuscles: [(muscle: MuscleGroup, volumeFactor: Double)]
+    let secondaryMuscles: [SecondaryMuscle]
     
     init(name: String, primaryMuscle: MuscleGroup, secondaryMuscles: [(muscle: MuscleGroup, volumeFactor: Double)] = []) {
         self.id = UUID()
         self.name = name
         self.primaryMuscle = primaryMuscle
-        self.secondaryMuscles = secondaryMuscles
+        self.secondaryMuscles = secondaryMuscles.map { SecondaryMuscle(muscle: $0.muscle, volumeFactor: $0.volumeFactor) }
     }
     
     // Returns volume contribution for a given muscle group per set
@@ -29,10 +34,10 @@ struct Exercise: Identifiable, Codable, Hashable {
 
 // Extension to provide static pre-defined exercises
 extension Exercise {
-    static let all: [Exercise] = quadsExercises + glutesExercises + hamstringsExercises + 
-                                backExercises + chestExercises + shouldersExercises + 
-                                tricepsExercises + bicepsExercises + absExercises + 
-                                calvesExercises + trapsNeckExercises + forearmsExercises + 
+    static let all: [Exercise] = quadsExercises + glutesExercises + hamstringsExercises +
+                                backExercises + chestExercises + shouldersExercises +
+                                tricepsExercises + bicepsExercises + absExercises +
+                                calvesExercises + trapsNeckExercises + forearmsExercises +
                                 lowerBackExercises
     
     static let quadsExercises: [Exercise] = [

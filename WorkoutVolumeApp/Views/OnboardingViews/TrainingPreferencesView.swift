@@ -105,12 +105,9 @@ struct TrainingPreferencesView: View {
                         .cornerRadius(10)
                 }
                 .padding(.vertical)
-                
-                NavigationLink(
-                    destination: CreatePlanView(viewModel: viewModel),
-                    isActive: $showingPlanCreation,
-                    label: { EmptyView() }
-                )
+            }
+            .navigationDestination(isPresented: $showingPlanCreation) {
+                CreatePlanView(viewModel: viewModel)
             }
             .padding()
         }

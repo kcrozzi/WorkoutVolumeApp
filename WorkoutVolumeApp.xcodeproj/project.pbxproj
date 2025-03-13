@@ -30,7 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A1B2C3D4E5F6A7B8C9D0E2BB /* WorkoutVolumeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutVolumeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B2C3D4E5F6A7B8C9D0E1F3 /* WorkoutVolumeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutVolumeApp.swift; sourceTree = "<group>"; };
 		A1B2C3D4E5F6A7B8C9D0E1F5 /* Models/MuscleGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/MuscleGroup.swift; sourceTree = "<group>"; };
 		A1B2C3D4E5F6A7B8C9D0E1F7 /* Models/Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Exercise.swift; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		A1B2C3D4E5F6A7B8C9D0E2B6 /* Views/MainViews/SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/MainViews/SettingsView.swift; sourceTree = "<group>"; };
 		A1B2C3D4E5F6A7B8C9D0E2B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1B2C3D4E5F6A7B8C9D0E2BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1B2C3D4E5F6A7B8C9D0E2BB /* WorkoutVolumeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutVolumeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B2C3D4E5F6A7B8C9D0E2BC /* WorkoutVolumeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorkoutVolumeApp.entitlements; sourceTree = "<group>"; };
 		A1B2C3D4E5F6A7B8C9D0E2BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,14 +74,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		A1B2C3D4E5F6A7B8C9D0E2C2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A1B2C3D4E5F6A7B8C9D0E2BB /* WorkoutVolumeApp.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		A1B2C3D4E5F6A7B8C9D0E2C1 /* WorkoutVolumeApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +88,14 @@
 				A1B2C3D4E5F6A7B8C9D0E2C7 /* Preview Content */,
 			);
 			path = WorkoutVolumeApp;
+			sourceTree = "<group>";
+		};
+		A1B2C3D4E5F6A7B8C9D0E2C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1B2C3D4E5F6A7B8C9D0E2BB /* WorkoutVolumeApp.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A1B2C3D4E5F6A7B8C9D0E2C3 /* Models */ = {
@@ -141,7 +141,6 @@
 			children = (
 				A1B2C3D4E5F6A7B8C9D0E2BA /* Preview Assets.xcassets */,
 			);
-			name = "Preview Content";
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
@@ -385,7 +384,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkoutVolumeApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7FDVCK284B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -419,7 +418,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkoutVolumeApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7FDVCK284B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -448,20 +447,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1B2C3D4E5F6A7B8C9D0E2CF /* Build configuration list for PBXProject "WorkoutVolumeApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A1B2C3D4E5F6A7B8C9D0E2D0 /* Debug */,
-				A1B2C3D4E5F6A7B8C9D0E2D1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		A1B2C3D4E5F6A7B8C9D0E2CB /* Build configuration list for PBXNativeTarget "WorkoutVolumeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1B2C3D4E5F6A7B8C9D0E2D2 /* Debug */,
 				A1B2C3D4E5F6A7B8C9D0E2D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1B2C3D4E5F6A7B8C9D0E2CF /* Build configuration list for PBXProject "WorkoutVolumeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B2C3D4E5F6A7B8C9D0E2D0 /* Debug */,
+				A1B2C3D4E5F6A7B8C9D0E2D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

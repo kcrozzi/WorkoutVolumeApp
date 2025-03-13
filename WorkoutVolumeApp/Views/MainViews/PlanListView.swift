@@ -188,6 +188,7 @@ struct NewPlanSheet: View {
                                         name: planName,
                                         userPreferences: preferences
                                     )
+                                    viewModel.selectPlan(id: newPlan.id)
                                     isPresented = false
                                 }) {
                                     Text("Create Plan")

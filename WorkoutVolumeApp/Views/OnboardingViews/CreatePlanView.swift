@@ -51,15 +51,11 @@ struct CreatePlanView: View {
             }
             .padding(.horizontal)
             .padding(.bottom)
-            
-            // This NavigationLink will take us to the main app view
-            NavigationLink(
-                destination: MainTabView()
-                    .navigationBarBackButtonHidden(true)
-                    .navigationBarHidden(true),
-                isActive: $showingMainApp,
-                label: { EmptyView() }
-            )
+        }
+        .navigationDestination(isPresented: $showingMainApp) {
+            MainTabView()
+                .navigationBarBackButtonHidden(true)
+                .navigationBarHidden(true)
         }
         .navigationTitle("Create Plan")
         .navigationBarTitleDisplayMode(.inline)
